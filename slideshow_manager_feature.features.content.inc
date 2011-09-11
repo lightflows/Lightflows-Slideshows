@@ -6,6 +6,74 @@
 function slideshow_manager_feature_content_default_fields() {
   $fields = array();
 
+  // Exported field: field_add_slideshow
+  $fields['page-field_add_slideshow'] = array(
+    'field_name' => 'field_add_slideshow',
+    'type_name' => 'page',
+    'display_settings' => array(
+      'weight' => '-3',
+      'parent' => '',
+      'label' => array(
+        'format' => 'above',
+      ),
+      'teaser' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      'full' => array(
+        'format' => 'default',
+        'exclude' => 1,
+      ),
+      '4' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '2' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      '3' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+      'token' => array(
+        'format' => 'default',
+        'exclude' => 0,
+      ),
+    ),
+    'widget_active' => '1',
+    'type' => 'nodereference',
+    'required' => '0',
+    'multiple' => '0',
+    'module' => 'nodereference',
+    'active' => '1',
+    'referenceable_types' => array(
+      'slideshow' => 'slideshow',
+      'page' => 0,
+      'slide' => 0,
+      'slideshow_feature_page' => 0,
+      'slideshow_test_page' => 0,
+      'story' => 0,
+    ),
+    'advanced_view' => '--',
+    'advanced_view_args' => '',
+    'widget' => array(
+      'autocomplete_match' => 'contains',
+      'size' => 60,
+      'default_value' => array(
+        '0' => array(
+          'nid' => '',
+        ),
+      ),
+      'default_value_php' => NULL,
+      'label' => 'Add Slideshow',
+      'weight' => '32',
+      'description' => 'Add a slideshow that you have made to this page',
+      'type' => 'nodereference_select',
+      'module' => 'nodereference',
+    ),
+  );
+
   // Exported field: field_image
   $fields['slide-field_image'] = array(
     'field_name' => 'field_image',
@@ -423,13 +491,11 @@ function slideshow_manager_feature_content_default_fields() {
     'active' => '1',
     'referenceable_types' => array(
       'slideshow' => 'slideshow',
-      'article' => 0,
       'page' => 0,
-      'service' => 0,
       'slide' => 0,
       'slideshow_feature_page' => 0,
-      'testimonial' => 0,
-      'webform' => 0,
+      'slideshow_test_page' => 0,
+      'story' => 0,
     ),
     'advanced_view' => '--',
     'advanced_view_args' => '',

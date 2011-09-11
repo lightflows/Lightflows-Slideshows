@@ -93,6 +93,13 @@ function slideshow_manager_feature_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'comment_page';
+  $strongarm->value = 0;
+  $export['comment_page'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_preview_slideshow';
   $strongarm->value = '1';
   $export['comment_preview_slideshow'] = $strongarm;
@@ -135,6 +142,22 @@ function slideshow_manager_feature_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'content_extra_weights_page';
+  $strongarm->value = array(
+    'title' => '-5',
+    'body_field' => '0',
+    'revision_information' => '20',
+    'author' => '20',
+    'options' => '25',
+    'comment_settings' => '30',
+    'menu' => '-2',
+    'Slideshow_node_content_2' => '10',
+  );
+  $export['content_extra_weights_page'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'content_extra_weights_slideshow_feature_page';
   $strongarm->value = array(
     'title' => '-5',
@@ -147,6 +170,15 @@ function slideshow_manager_feature_strongarm() {
     'path' => '3',
   );
   $export['content_extra_weights_slideshow_feature_page'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_options_page';
+  $strongarm->value = array(
+    0 => 'status',
+  );
+  $export['node_options_page'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
