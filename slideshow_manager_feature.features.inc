@@ -11,6 +11,41 @@ function slideshow_manager_feature_ctools_plugin_api() {
 }
 
 /**
+ * Implementation of hook_imagecache_default_presets().
+ */
+function slideshow_manager_feature_imagecache_default_presets() {
+  $items = array(
+    'slideshow' => array(
+      'presetname' => 'slideshow',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_deprecated_scale',
+          'data' => array(
+            'fit' => 'outside',
+            'width' => '940',
+            'height' => '295',
+          ),
+        ),
+        '1' => array(
+          'weight' => '0',
+          'module' => 'imagecache',
+          'action' => 'imagecache_crop',
+          'data' => array(
+            'width' => '940',
+            'height' => '295',
+            'xoffset' => 'center',
+            'yoffset' => 'center',
+          ),
+        ),
+      ),
+    ),
+  );
+  return $items;
+}
+
+/**
  * Implementation of hook_node_info().
  */
 function slideshow_manager_feature_node_info() {
@@ -34,6 +69,17 @@ function slideshow_manager_feature_node_info() {
       'title_label' => t('Title'),
       'has_body' => '0',
       'body_label' => '',
+      'min_word_count' => '0',
+      'help' => '',
+    ),
+    'slideshow_feature_page' => array(
+      'name' => t('Slideshow feature page'),
+      'module' => 'features',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'has_body' => '1',
+      'body_label' => t('Body'),
       'min_word_count' => '0',
       'help' => '',
     ),

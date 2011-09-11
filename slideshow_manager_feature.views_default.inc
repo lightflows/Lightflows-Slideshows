@@ -296,15 +296,15 @@ function slideshow_manager_feature_views_default_views() {
         'max_length' => '',
         'word_boundary' => 1,
         'ellipsis' => 1,
-        'strip_tags' => 0,
         'html' => 0,
+        'strip_tags' => 0,
       ),
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
       'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'thumbnail_default',
+      'format' => 'image_plain',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
@@ -699,15 +699,15 @@ function slideshow_manager_feature_views_default_views() {
         'max_length' => '',
         'word_boundary' => 1,
         'ellipsis' => 1,
-        'strip_tags' => 0,
         'html' => 0,
+        'strip_tags' => 0,
       ),
       'empty' => '',
       'hide_empty' => 0,
       'empty_zero' => 0,
       'link_to_node' => 0,
       'label_type' => 'none',
-      'format' => 'image_plain',
+      'format' => 'slideshow_default',
       'multiple' => array(
         'group' => TRUE,
         'multiple_number' => '',
@@ -749,15 +749,15 @@ function slideshow_manager_feature_views_default_views() {
       'start_paused' => 0,
       'fixed_height' => '1',
       'random' => '0',
-      'pause' => '1',
+      'pause' => '2',
       'pause_on_click' => '0',
       'pause_when_hidden' => 0,
       'pause_when_hidden_type' => 'full',
       'amount_allowed_visible' => '',
       'remember_slide' => 0,
       'remember_slide_days' => '1',
-      'controls' => '0',
-      'pager' => '0',
+      'controls' => '2',
+      'pager' => '2',
       'pager_type' => 'Numbered',
       'pager_hover' => '2',
       'pager_click_to_page' => 0,
@@ -825,6 +825,7 @@ function slideshow_manager_feature_views_default_views() {
   ));
   $handler->override_option('types', array(
     'page' => 'page',
+    'service' => 'service',
     'slide' => 'slide',
     'slideshow' => 'slideshow',
   ));
@@ -924,7 +925,7 @@ function slideshow_manager_feature_views_default_views() {
     'type' => 'none',
   ));
   $handler->override_option('header', 'These are the available slideshows in the CMS. Click one to edit it.');
-  $handler->override_option('header_format', '4');
+  $handler->override_option('header_format', '1');
   $handler->override_option('header_empty', 0);
   $handler->override_option('row_options', array(
     'inline' => array(),
